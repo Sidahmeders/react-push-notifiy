@@ -160,9 +160,3 @@ The addNotification() function takes an object as argument with the follow prope
 
 
 The custom background or font colors will always override a chosen theme.
-
-### Changelog
-
-v1.0.0
-
-Added native os push notification support, as well as an onClick callback function.
