@@ -1,4 +1,4 @@
-# [react-push-notifiy](https://www.npmjs.com/package/react-push-notifiy) is based on [react-push-notification](https://www.npmjs.com/package/react-push-notification) that includes bug fixes and improvements to address issues that are not being maintained by the original package!
+## [react-push-notifiy](https://www.npmjs.com/package/react-push-notifiy) is based on [react-push-notification](https://www.npmjs.com/package/react-push-notification) that includes bug fixes and improvements to address issues that are not being maintained by the original package!
 
 ### NOTE: ***this package is actively maintained and I will continue to address any issues or bugs that arise and users are welcomed to report issues or contribute to the project***
 
