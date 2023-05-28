@@ -99,7 +99,7 @@ class Storage {
             serviceWorker?.ready.then((registration) => {
                 setTimeout(() => {
                     registration.showNotification(`${title || ''} ${message || ''}`, options)
-                }, duration || defaultDuration);
+                }, duration || defaultDuration)
             })
         }
     };
