@@ -24,7 +24,6 @@ export type Options = {
     icon?: string,
     vibrate?: number | number[],
     silent?: boolean
-    serviceWorker?: ServiceWorkerContainer
 }
 
 export type Styling = {
@@ -95,11 +94,9 @@ class Storage {
             await Notification.requestPermission();
         }
         if (Notification.permission === 'granted') {
-            const { serviceWorker, duration, title, message } = options
-            serviceWorker?.ready.then((registration) => {
-                setTimeout(() => {
-                    registration.showNotification(`${title || ''} ${message || ''}`, options)
-                }, duration || defaultDuration)
+            const { title, message } = options
+            navigator.serviceWorker.ready.then((registration) => {
+                registration.showNotification(`${title || ''} ${message || ''}`, options)
             })
         }
     };

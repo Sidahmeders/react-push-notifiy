@@ -47,20 +47,14 @@ class Storage {
             this.Listener = listener;
         };
         this.addNativeNotification = (options) => __awaiter(this, void 0, void 0, function* () {
-            const { title, subtitle, message, duration, icon, vibrate, silent, onClick } = options;
             if (Notification.permission === 'default' || Notification.permission === 'denied') {
                 yield Notification.requestPermission();
             }
             if (Notification.permission === 'granted') {
-                const not = new Notification(title, {
-                    body: message,
-                    data: subtitle,
-                    icon,
-                    vibrate,
-                    silent
+                const { title, message } = options;
+                navigator.serviceWorker.ready.then((registration) => {
+                    registration.showNotification(`${title || ''} ${message || ''}`, options);
                 });
-                not.onclick = onClick || null;
-                setTimeout(not.close.bind(not), duration || defaultDuration);
             }
         });
         this.addWebNotification = (options) => {
