@@ -95,9 +95,11 @@ class Storage {
             await Notification.requestPermission();
         }
         if (Notification.permission === 'granted') {
-            const { serviceWorker, title, message } = options
+            const { serviceWorker, duration, title, message } = options
             serviceWorker?.ready.then((registration) => {
-                registration.showNotification(`${title || ''} ${message || ''}`, options)
+                setTimeout(() => {
+                    registration.showNotification(`${title || ''} ${message || ''}`, options)
+                }, duration || defaultDuration);
             })
         }
     };
