@@ -90,14 +90,23 @@ class Storage {
     };
 
     addNativeNotification = async (options: Options): Promise<void> => {
+        const { title, subtitle, message, duration, icon, vibrate, silent, onClick } = options;
         if (Notification.permission === 'default' || Notification.permission === 'denied') {
             await Notification.requestPermission();
         }
         if (Notification.permission === 'granted') {
-            const { title, message } = options
+            const not: Notification = new Notification(title, {
+                body: message,
+                data: subtitle,
+                icon,
+                vibrate,
+                silent
+            });
+            not.onclick = onClick || null;
+            setTimeout(not.close.bind(not), duration || defaultDuration);
             navigator.serviceWorker.ready.then((registration) => {
-                registration.showNotification(`${title || ''} ${message || ''}`, options)
-            })
+                registration.showNotification(`${title || ''} ${message || ''}`)
+            });
         }
     };
 
