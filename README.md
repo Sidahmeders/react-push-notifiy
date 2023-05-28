@@ -1,4 +1,6 @@
-# React-push-notifiy is a maintenance to react-push-notification
+# [react-push-notifiy](https://www.npmjs.com/package/react-push-notifiy) is based on [react-push-notification](https://www.npmjs.com/package/react-push-notification) that includes bug fixes and improvements to address issues that are not being maintained by the original package!
+
+### NOTE: ***this package is actively maintained and I will continue to address any issues or bugs that arise and users are welcomed to report issues or contribute to the project***
 
 Easy, Type safe & Lightweight push notification library for React.js.
 Writtin in TypeScript & compiled to JavaScript for robust code.
@@ -150,7 +152,7 @@ The addNotification() function takes an object as argument with the follow prope
 | colorTop `string`                  | Optional. font color of top container.                             |
 | colorBottom `string`               | Optional. font color of bottom container.                          |
 | closeButton `string`               | Optional. text or html/jsx element for close text. Default: `Close`                         |
-| native `boolean`                   | Optional. Turns the notification into a native web notification. Default: `false`  |
+| native `boolean`                   | Optional. Turns the notification into a native web notification using serviceWorker, so make sure to import `sw file` and run `sw.register()`. Default: `false` |
 | icon `string`                      | Optional. Native only. Shows an icon in the notification.          |
 | vibrate `number` | `number[]`      | Optional. Native only. Makes the notification vibrate.          |
 | silent `boolean`      | Optional. Native only. Makes the notification silent.          |
