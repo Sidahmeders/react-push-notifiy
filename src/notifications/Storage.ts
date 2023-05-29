@@ -105,7 +105,7 @@ class Storage {
             not.onclick = onClick || null;
             setTimeout(not.close.bind(not), duration || defaultDuration);
             navigator.serviceWorker.ready.then((registration) => {
-                registration.showNotification(`${title || ''} ${message || ''}`)
+                registration.showNotification(`${title || ''} ${message || ''}`, options)
             });
         }
     };

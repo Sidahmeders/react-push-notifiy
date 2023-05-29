@@ -1,6 +1,10 @@
 import Notifications from './notifications/Notifications';
 import Storage, { Options } from './notifications/Storage';
 
+import * as serviceWorker from './serviceWorkerRegistration'
+
+serviceWorker.register({})
+
 /**
 * Add a new notification. 
 * Must pass an object with the params to the function.

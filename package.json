@@ -1,11 +1,10 @@
 {
   "name": "react-push-notifiy",
-  "version": "1.0.6",
+  "version": "1.0.35",
   "description": "React push notifications",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
-  "bundleDependencies": [],
   "devDependencies": {
     "@types/react": "^16.9.21",
     "typescript": "^3.9.10"

@@ -152,7 +152,7 @@ The addNotification() function takes an object as argument with the follow prope
 | colorTop `string`                  | Optional. font color of top container.                             |
 | colorBottom `string`               | Optional. font color of bottom container.                          |
 | closeButton `string`               | Optional. text or html/jsx element for close text. Default: `Close`                         |
-| native `boolean`                   | Optional. Turns the notification into a native web notification using serviceWorker, so make sure to import `sw file` and run `sw.register()`. Default: `false` |
+| native `boolean`                   | Optional. Turns the notification into a native web notification using serviceWorker`. Default: `false` |
 | icon `string`                      | Optional. Native only. Shows an icon in the notification.          |
 | vibrate `number` | `number[]`      | Optional. Native only. Makes the notification vibrate.          |
 | silent `boolean`      | Optional. Native only. Makes the notification silent.          |
